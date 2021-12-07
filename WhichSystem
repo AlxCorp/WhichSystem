@@ -2,9 +2,9 @@
 
 numero=$(ping -c 1 $1 | grep ttl | awk '{print $6}' | sed 's/ttl=//gi')
 
-if [ "$numero" == "64" ] || [ "numero" = "63" ]; then
+if [ "$numero" == "64" ] || [ "$numero" = "63" ]; then
 	echo "Estas ante una maquina LINUX"
-elif [ "$numero" == "128" ] || [ "numero" = "127" ]; then
+elif [ "$numero" == "128" ] || [ "$numero" = "127" ]; then
 	echo "Estas ante una maquina WINDOWS"
 fi
 
